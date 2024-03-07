@@ -37,7 +37,14 @@ if __name__ == "__main__":
 
 
 class Tests(unittest.TestCase):
+"""
+Test Case from <https://datatracker.ietf.org/doc/html/rfc7929#section-3>
 
+For example, to request an OPENPGPKEY resource record for a user
+   whose email address is "hugh@example.com", an OPENPGPKEY query would
+   be placed for the following QNAME: "c93f1e400f26708f98cb19d936620da35
+   eec8f72e57f9eec01c1afd6._openpgpkey.example.com".
+"""
     def test_basic(self):
         self.assertEqual(email2domain("hugh@example.com"),
                 "c93f1e400f26708f98cb19d936620da35eec8f72e57f9eec01c1afd6._openpgpkey.example.com")
